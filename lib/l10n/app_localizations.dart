@@ -435,6 +435,114 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Unlock your wallet'**
   String get lockReason;
+
+  /// No description provided for @homeAccountName.
+  ///
+  /// In en, this message translates to:
+  /// **'Account 1'**
+  String get homeAccountName;
+
+  /// No description provided for @homeBalanceUsd.
+  ///
+  /// In en, this message translates to:
+  /// **'Total balance'**
+  String get homeBalanceUsd;
+
+  /// No description provided for @homeChange24h.
+  ///
+  /// In en, this message translates to:
+  /// **'24h change'**
+  String get homeChange24h;
+
+  /// No description provided for @actionBuy.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy'**
+  String get actionBuy;
+
+  /// No description provided for @actionSwap.
+  ///
+  /// In en, this message translates to:
+  /// **'Swap'**
+  String get actionSwap;
+
+  /// No description provided for @actionBridge.
+  ///
+  /// In en, this message translates to:
+  /// **'Bridge'**
+  String get actionBridge;
+
+  /// No description provided for @tabTokens.
+  ///
+  /// In en, this message translates to:
+  /// **'Tokens'**
+  String get tabTokens;
+
+  /// No description provided for @tabNfts.
+  ///
+  /// In en, this message translates to:
+  /// **'NFTs'**
+  String get tabNfts;
+
+  /// No description provided for @tabActivity.
+  ///
+  /// In en, this message translates to:
+  /// **'Activity'**
+  String get tabActivity;
+
+  /// No description provided for @tabDeFi.
+  ///
+  /// In en, this message translates to:
+  /// **'DeFi'**
+  String get tabDeFi;
+
+  /// No description provided for @deFiComingSoon.
+  ///
+  /// In en, this message translates to:
+  /// **'DeFi integrations are coming soon.'**
+  String get deFiComingSoon;
+
+  /// No description provided for @tokensEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No tokens yet'**
+  String get tokensEmpty;
+
+  /// No description provided for @nftsEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No NFTs yet'**
+  String get nftsEmpty;
+
+  /// No description provided for @activityEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No activity yet'**
+  String get activityEmpty;
+
+  /// No description provided for @networkPickerTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Select network'**
+  String get networkPickerTitle;
+
+  /// No description provided for @sendTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Send'**
+  String get sendTitle;
+
+  /// No description provided for @receiveHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Only send {symbol} on {network}'**
+  String receiveHint(String symbol, String network);
+
+  /// No description provided for @accountsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Accounts'**
+  String get accountsTitle;
 }
 
 class _AppLocalizationsDelegate

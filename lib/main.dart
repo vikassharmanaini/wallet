@@ -8,9 +8,12 @@ import 'package:local_auth/local_auth.dart';
 import 'app.dart';
 import 'core/router/app_router.dart';
 import 'core/security/local_auth_service.dart';
+import 'data/datasources/network_asset_loader.dart';
 import 'data/datasources/preferences_storage.dart';
 import 'data/datasources/wallet_secure_storage.dart';
+import 'data/repositories/network_repository_impl.dart';
 import 'data/repositories/wallet_repository_impl.dart';
+import 'domain/repositories/network_repository.dart';
 import 'domain/repositories/wallet_repository.dart';
 import 'presentation/blocs/theme/theme_cubit.dart';
 import 'presentation/security/app_lock_controller.dart';
@@ -24,6 +27,10 @@ Future<void> main() async {
   const FlutterSecureStorage storage = FlutterSecureStorage();
   final WalletSecureStorage walletStorage = WalletSecureStorage(storage);
   final WalletRepository repository = WalletRepositoryImpl(walletStorage);
+  final NetworkRepository networkRepository = NetworkRepositoryImpl(
+    NetworkAssetLoader(),
+    preferences,
+  );
   final ThemeCubit themeCubit = ThemeCubit(preferences);
   final AppLockController appLock = AppLockController(preferences);
   appLock.attach();
@@ -33,6 +40,7 @@ Future<void> main() async {
     MultiRepositoryProvider(
       providers: <RepositoryProvider<dynamic>>[
         RepositoryProvider<WalletRepository>.value(value: repository),
+        RepositoryProvider<NetworkRepository>.value(value: networkRepository),
         RepositoryProvider<AppLockController>.value(value: appLock),
         RepositoryProvider<LocalAuthService>.value(value: localAuth),
       ],

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:superweb3wallet/presentation/screens/accounts/accounts_screen.dart';
 import 'package:superweb3wallet/presentation/screens/home/wallet_home_screen.dart';
+import 'package:superweb3wallet/presentation/screens/receive/receive_screen.dart';
+import 'package:superweb3wallet/presentation/screens/send/send_screen.dart';
 import 'package:superweb3wallet/presentation/screens/legal/legal_webview_screen.dart';
 import 'package:superweb3wallet/presentation/screens/onboarding/backup_phrase_screen.dart';
 import 'package:superweb3wallet/presentation/screens/onboarding/create_password_screen.dart';
@@ -83,6 +86,24 @@ class AppRouter {
           name: WalletHomeScreen.routeName,
           builder: (BuildContext context, GoRouterState state) =>
               const WalletHomeScreen(),
+        ),
+        GoRoute(
+          path: SendScreen.routePath,
+          name: SendScreen.routeName,
+          builder: (BuildContext context, GoRouterState state) =>
+              const SendScreen(),
+        ),
+        GoRoute(
+          path: ReceiveScreen.routePath,
+          name: ReceiveScreen.routeName,
+          builder: (BuildContext context, GoRouterState state) =>
+              const ReceiveScreen(),
+        ),
+        GoRoute(
+          path: AccountsScreen.routePath,
+          name: AccountsScreen.routeName,
+          builder: (BuildContext context, GoRouterState state) =>
+              const AccountsScreen(),
         ),
         GoRoute(
           path: LegalWebViewScreen.routePath,

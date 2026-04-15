@@ -44,4 +44,18 @@ class PreferencesStorage {
     }
     return int.tryParse(raw) ?? 5;
   }
+
+  /// Reads persisted active chain id, if any.
+  Future<int?> readActiveChainId() async {
+    final String? raw = _box.get(AppConstants.activeChainIdKey);
+    if (raw == null) {
+      return null;
+    }
+    return int.tryParse(raw);
+  }
+
+  /// Persists the active chain id.
+  Future<void> saveActiveChainId(int chainId) async {
+    await _box.put(AppConstants.activeChainIdKey, chainId.toString());
+  }
 }

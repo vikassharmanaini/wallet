@@ -185,4 +185,60 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get lockReason => 'Unlock your wallet';
+
+  @override
+  String get homeAccountName => 'Account 1';
+
+  @override
+  String get homeBalanceUsd => 'Total balance';
+
+  @override
+  String get homeChange24h => '24h change';
+
+  @override
+  String get actionBuy => 'Buy';
+
+  @override
+  String get actionSwap => 'Swap';
+
+  @override
+  String get actionBridge => 'Bridge';
+
+  @override
+  String get tabTokens => 'Tokens';
+
+  @override
+  String get tabNfts => 'NFTs';
+
+  @override
+  String get tabActivity => 'Activity';
+
+  @override
+  String get tabDeFi => 'DeFi';
+
+  @override
+  String get deFiComingSoon => 'DeFi integrations are coming soon.';
+
+  @override
+  String get tokensEmpty => 'No tokens yet';
+
+  @override
+  String get nftsEmpty => 'No NFTs yet';
+
+  @override
+  String get activityEmpty => 'No activity yet';
+
+  @override
+  String get networkPickerTitle => 'Select network';
+
+  @override
+  String get sendTitle => 'Send';
+
+  @override
+  String receiveHint(String symbol, String network) {
+    return 'Only send $symbol on $network';
+  }
+
+  @override
+  String get accountsTitle => 'Accounts';
 }

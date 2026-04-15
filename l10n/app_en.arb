@@ -63,5 +63,29 @@
   "lockTitle": "Unlock SuperWeb3Wallet",
   "lockSubtitle": "Authenticate to continue.",
   "lockUnlock": "Unlock with biometrics",
-  "lockReason": "Unlock your wallet"
+  "lockReason": "Unlock your wallet",
+  "homeAccountName": "Account 1",
+  "homeBalanceUsd": "Total balance",
+  "homeChange24h": "24h change",
+  "actionBuy": "Buy",
+  "actionSwap": "Swap",
+  "actionBridge": "Bridge",
+  "tabTokens": "Tokens",
+  "tabNfts": "NFTs",
+  "tabActivity": "Activity",
+  "tabDeFi": "DeFi",
+  "deFiComingSoon": "DeFi integrations are coming soon.",
+  "tokensEmpty": "No tokens yet",
+  "nftsEmpty": "No NFTs yet",
+  "activityEmpty": "No activity yet",
+  "networkPickerTitle": "Select network",
+  "sendTitle": "Send",
+  "receiveHint": "Only send {symbol} on {network}",
+  "@receiveHint": {
+    "placeholders": {
+      "symbol": {"type": "String"},
+      "network": {"type": "String"}
+    }
+  },
+  "accountsTitle": "Accounts"
 }
