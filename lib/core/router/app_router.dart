@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:superweb3wallet/presentation/screens/accounts/accounts_screen.dart';
+import 'package:superweb3wallet/presentation/screens/bridge/bridge_screen.dart';
+import 'package:superweb3wallet/presentation/screens/browser/browser_screen.dart';
+import 'package:superweb3wallet/presentation/screens/buy/buy_screen.dart';
 import 'package:superweb3wallet/presentation/screens/home/wallet_home_screen.dart';
 import 'package:superweb3wallet/presentation/screens/receive/receive_screen.dart';
 import 'package:superweb3wallet/presentation/screens/send/send_screen.dart';
+import 'package:superweb3wallet/presentation/screens/swap/swap_screen.dart';
 import 'package:superweb3wallet/presentation/screens/legal/legal_webview_screen.dart';
 import 'package:superweb3wallet/presentation/screens/onboarding/backup_phrase_screen.dart';
 import 'package:superweb3wallet/presentation/screens/onboarding/create_password_screen.dart';
@@ -104,6 +108,30 @@ class AppRouter {
           name: AccountsScreen.routeName,
           builder: (BuildContext context, GoRouterState state) =>
               const AccountsScreen(),
+        ),
+        GoRoute(
+          path: SwapScreen.routePath,
+          name: SwapScreen.routeName,
+          builder: (BuildContext context, GoRouterState state) =>
+              const SwapScreen(),
+        ),
+        GoRoute(
+          path: BridgeScreen.routePath,
+          name: BridgeScreen.routeName,
+          builder: (BuildContext context, GoRouterState state) =>
+              const BridgeScreen(),
+        ),
+        GoRoute(
+          path: BuyScreen.routePath,
+          name: BuyScreen.routeName,
+          builder: (BuildContext context, GoRouterState state) =>
+              const BuyScreen(),
+        ),
+        GoRoute(
+          path: BrowserScreen.routePath,
+          name: BrowserScreen.routeName,
+          builder: (BuildContext context, GoRouterState state) =>
+              const BrowserScreen(),
         ),
         GoRoute(
           path: LegalWebViewScreen.routePath,

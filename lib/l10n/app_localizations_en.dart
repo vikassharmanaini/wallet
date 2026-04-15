@@ -241,4 +241,25 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get accountsTitle => 'Accounts';
+
+  @override
+  String get swapTitle => 'Swap';
+
+  @override
+  String get bridgeTitle => 'Bridge';
+
+  @override
+  String get buyTitle => 'Buy';
+
+  @override
+  String get browserTitle => 'Browser';
+
+  @override
+  String get settingsTitle => 'Settings';
+
+  @override
+  String get signPersonalTitle => 'Sign message';
+
+  @override
+  String get signTxTitle => 'Confirm transaction';
 }

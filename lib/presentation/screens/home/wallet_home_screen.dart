@@ -6,8 +6,12 @@ import 'package:superweb3wallet/domain/repositories/wallet_repository.dart';
 import 'package:superweb3wallet/domain/usecases/fetch_portfolio_balance_usecase.dart';
 import 'package:superweb3wallet/l10n/app_localizations.dart';
 import 'package:superweb3wallet/presentation/screens/accounts/accounts_screen.dart';
+import 'package:superweb3wallet/presentation/screens/bridge/bridge_screen.dart';
+import 'package:superweb3wallet/presentation/screens/browser/browser_screen.dart';
+import 'package:superweb3wallet/presentation/screens/buy/buy_screen.dart';
 import 'package:superweb3wallet/presentation/screens/receive/receive_screen.dart';
 import 'package:superweb3wallet/presentation/screens/send/send_screen.dart';
+import 'package:superweb3wallet/presentation/screens/swap/swap_screen.dart';
 import 'package:superweb3wallet/presentation/widgets/identicon/wallet_identicon.dart';
 import 'package:superweb3wallet/presentation/widgets/network/network_selector_sheet.dart';
 
@@ -75,8 +79,8 @@ class _WalletHomeScreenState extends State<WalletHomeScreen>
                       WalletIdenticon(address: addr),
                       const SizedBox(width: 8),
                       IconButton(
-                        onPressed: () {},
-                        icon: const Icon(Icons.notifications_none),
+                        onPressed: () => context.push(BrowserScreen.routePath),
+                        icon: const Icon(Icons.public),
                       ),
                     ],
                   ),
@@ -135,19 +139,19 @@ class _WalletHomeScreenState extends State<WalletHomeScreen>
                     children: <Widget>[
                       Expanded(
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () => context.push(BuyScreen.routePath),
                           child: Text(l10n.actionBuy),
                         ),
                       ),
                       Expanded(
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () => context.push(SwapScreen.routePath),
                           child: Text(l10n.actionSwap),
                         ),
                       ),
                       Expanded(
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () => context.push(BridgeScreen.routePath),
                           child: Text(l10n.actionBridge),
                         ),
                       ),

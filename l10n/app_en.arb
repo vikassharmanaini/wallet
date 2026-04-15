@@ -87,5 +87,12 @@
       "network": {"type": "String"}
     }
   },
-  "accountsTitle": "Accounts"
+  "accountsTitle": "Accounts",
+  "swapTitle": "Swap",
+  "bridgeTitle": "Bridge",
+  "buyTitle": "Buy",
+  "browserTitle": "Browser",
+  "settingsTitle": "Settings",
+  "signPersonalTitle": "Sign message",
+  "signTxTitle": "Confirm transaction"
 }

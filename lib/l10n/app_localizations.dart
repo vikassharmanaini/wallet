@@ -543,6 +543,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Accounts'**
   String get accountsTitle;
+
+  /// No description provided for @swapTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Swap'**
+  String get swapTitle;
+
+  /// No description provided for @bridgeTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Bridge'**
+  String get bridgeTitle;
+
+  /// No description provided for @buyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Buy'**
+  String get buyTitle;
+
+  /// No description provided for @browserTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Browser'**
+  String get browserTitle;
+
+  /// No description provided for @settingsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settingsTitle;
+
+  /// No description provided for @signPersonalTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign message'**
+  String get signPersonalTitle;
+
+  /// No description provided for @signTxTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm transaction'**
+  String get signTxTitle;
 }
 
 class _AppLocalizationsDelegate
