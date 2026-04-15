@@ -1,11 +1,63 @@
 {
   "@@locale": "en",
   "appTitle": "SuperWeb3Wallet",
-  "@appTitle": {
-    "description": "Application title shown in task switcher and about."
-  },
   "bootstrapReady": "Wallet shell ready",
-  "@bootstrapReady": {
-    "description": "Placeholder body on bootstrap home until onboarding ships."
-  }
+  "splashLoading": "Starting…",
+  "onboardingCreateWallet": "Create a New Wallet",
+  "onboardingImportSrp": "Import Using Secret Recovery Phrase",
+  "onboardingImportPk": "Import Using Private Key",
+  "onboardingPrivacyPolicy": "Privacy Policy",
+  "onboardingTermsOfService": "Terms of Service",
+  "passwordTitle": "Create password",
+  "passwordFieldLabel": "Password",
+  "passwordConfirmLabel": "Confirm password",
+  "passwordStrengthWeak": "Weak",
+  "passwordStrengthFair": "Fair",
+  "passwordStrengthStrong": "Strong",
+  "passwordStrengthVeryStrong": "Very Strong",
+  "passwordDisclaimer": "I understand I am responsible for keeping my wallet secure",
+  "passwordContinue": "Continue",
+  "passwordRequirementHint": "Min 8 characters with uppercase, number, and special character",
+  "backupTitle": "Secret Recovery Phrase",
+  "backupSubtitle": "Write these words down in order. Never share them.",
+  "backupToggleShow": "Show",
+  "backupToggleHide": "Hide",
+  "backupCopy": "Copy to clipboard",
+  "backupCopyUnsafeTitle": "Unsafe action",
+  "backupCopyUnsafeBody": "Copying your phrase is unsafe on shared devices.",
+  "backupWroteDown": "I wrote it down safely",
+  "backupContinue": "Continue",
+  "quizTitle": "Verify phrase",
+  "quizSubtitle": "Enter the missing words",
+  "quizIncorrect": "Incorrect, try again",
+  "quizContinue": "Verify",
+  "quizWordLabel": "Word {index}",
+  "@quizWordLabel": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      }
+    }
+  },
+  "importSrpTitle": "Import recovery phrase",
+  "importSrpPaste": "Paste phrase",
+  "importSrpWordsMode": "Enter words separately",
+  "importSrpPasteMode": "Paste phrase",
+  "importSrpInvalid": "Invalid phrase",
+  "importSrpContinue": "Import",
+  "importPkTitle": "Import private key",
+  "importPkHint": "64-character hex private key",
+  "importPkInvalid": "Invalid private key",
+  "importPkContinue": "Import",
+  "importSetPasswordTitle": "Set wallet password",
+  "homeTitle": "Wallet",
+  "homeAddress": "Address",
+  "legalLoading": "Loading…",
+  "commonCancel": "Cancel",
+  "commonOk": "OK",
+  "networkWarningTitle": "Security",
+  "networkWarningOnlySend": "Only send assets on supported networks.",
+  "receiveTitle": "Receive",
+  "actionSend": "Send",
+  "actionReceive": "Receive"
 }

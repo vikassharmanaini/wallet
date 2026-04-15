@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:superweb3wallet/l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
-import 'core/router/app_router.dart';
+import 'package:go_router/go_router.dart';
+import 'package:superweb3wallet/l10n/app_localizations.dart';
 
 /// Root widget configuring localization, theme, and [GoRouter] navigation.
 class SuperWeb3WalletApp extends StatelessWidget {
-  /// Creates the root app widget.
-  const SuperWeb3WalletApp({super.key});
+  /// Creates the root app widget with the provided [router].
+  const SuperWeb3WalletApp({super.key, required this.router});
+
+  /// Application-wide router instance.
+  final GoRouter router;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class SuperWeb3WalletApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      routerConfig: AppRouter.router,
+      routerConfig: router,
     );
   }
 }

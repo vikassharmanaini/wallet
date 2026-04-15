@@ -1,12 +1,25 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:superweb3wallet/app.dart';
+import 'package:superweb3wallet/core/router/app_router.dart';
+import 'package:superweb3wallet/domain/repositories/wallet_repository.dart';
+
+import 'support/fake_wallet_repository.dart';
 
 void main() {
-  testWidgets('Bootstrap screen shows localized title', (
+  testWidgets('Cold start navigates to onboarding when no wallet', (
     WidgetTester tester,
   ) async {
-    await tester.pumpWidget(const SuperWeb3WalletApp());
-    await tester.pumpAndSettle();
-    expect(find.text('SuperWeb3Wallet'), findsOneWidget);
+    final FakeWalletRepository repo = FakeWalletRepository(hasWalletValue: false);
+    await tester.pumpWidget(
+      RepositoryProvider<WalletRepository>.value(
+        value: repo,
+        child: SuperWeb3WalletApp(router: AppRouter.createRouter()),
+      ),
+    );
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
+    expect(repo.hasWalletValue, isFalse);
+    expect(find.text('Create a New Wallet'), findsOneWidget);
   });
 }
