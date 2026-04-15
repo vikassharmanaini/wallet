@@ -1,0 +1,11 @@
+{
+  "@@locale": "en",
+  "appTitle": "SuperWeb3Wallet",
+  "@appTitle": {
+    "description": "Application title shown in task switcher and about."
+  },
+  "bootstrapReady": "Wallet shell ready",
+  "@bootstrapReady": {
+    "description": "Placeholder body on bootstrap home until onboarding ships."
+  }
+}
