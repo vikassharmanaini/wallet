@@ -9,15 +9,25 @@ import 'package:superweb3wallet/presentation/screens/onboarding/import_private_k
 import 'package:superweb3wallet/presentation/screens/onboarding/import_srp_screen.dart';
 import 'package:superweb3wallet/presentation/screens/onboarding/mnemonic_quiz_screen.dart';
 import 'package:superweb3wallet/presentation/screens/onboarding/onboarding_screen.dart';
+import 'package:superweb3wallet/presentation/screens/security/lock_screen.dart';
 import 'package:superweb3wallet/presentation/screens/splash/splash_screen.dart';
+import 'package:superweb3wallet/presentation/security/app_lock_controller.dart';
 
 /// Central [GoRouter] configuration for SuperWeb3Wallet.
 class AppRouter {
   AppRouter._();
 
   /// Builds the application router graph.
-  static GoRouter createRouter() {
+  static GoRouter createRouter({required AppLockController appLock}) {
     return GoRouter(
+      refreshListenable: appLock,
+      redirect: (BuildContext context, GoRouterState state) {
+        if (appLock.locked &&
+            state.matchedLocation != LockScreen.routePath) {
+          return LockScreen.routePath;
+        }
+        return null;
+      },
       initialLocation: SplashScreen.routePath,
       routes: <RouteBase>[
         GoRoute(
@@ -84,6 +94,12 @@ class AppRouter {
                 : 'https://policies.google.com/privacy?hl=en';
             return LegalWebViewScreen(initialUrl: url);
           },
+        ),
+        GoRoute(
+          path: LockScreen.routePath,
+          name: LockScreen.routeName,
+          builder: (BuildContext context, GoRouterState state) =>
+              const LockScreen(),
         ),
       ],
     );

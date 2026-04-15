@@ -59,5 +59,9 @@
   "networkWarningOnlySend": "Only send assets on supported networks.",
   "receiveTitle": "Receive",
   "actionSend": "Send",
-  "actionReceive": "Receive"
+  "actionReceive": "Receive",
+  "lockTitle": "Unlock SuperWeb3Wallet",
+  "lockSubtitle": "Authenticate to continue.",
+  "lockUnlock": "Unlock with biometrics",
+  "lockReason": "Unlock your wallet"
 }

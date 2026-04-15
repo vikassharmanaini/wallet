@@ -411,6 +411,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Receive'**
   String get actionReceive;
+
+  /// No description provided for @lockTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock SuperWeb3Wallet'**
+  String get lockTitle;
+
+  /// No description provided for @lockSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Authenticate to continue.'**
+  String get lockSubtitle;
+
+  /// No description provided for @lockUnlock.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock with biometrics'**
+  String get lockUnlock;
+
+  /// No description provided for @lockReason.
+  ///
+  /// In en, this message translates to:
+  /// **'Unlock your wallet'**
+  String get lockReason;
 }
 
 class _AppLocalizationsDelegate

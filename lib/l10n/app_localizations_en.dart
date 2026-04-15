@@ -173,4 +173,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get actionReceive => 'Receive';
+
+  @override
+  String get lockTitle => 'Unlock SuperWeb3Wallet';
+
+  @override
+  String get lockSubtitle => 'Authenticate to continue.';
+
+  @override
+  String get lockUnlock => 'Unlock with biometrics';
+
+  @override
+  String get lockReason => 'Unlock your wallet';
 }

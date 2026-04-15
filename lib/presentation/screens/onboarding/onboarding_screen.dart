@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lottie/lottie.dart';
 import 'package:superweb3wallet/l10n/app_localizations.dart';
 import 'package:superweb3wallet/presentation/screens/legal/legal_webview_screen.dart';
 import 'package:superweb3wallet/presentation/screens/onboarding/create_password_screen.dart';
@@ -31,17 +30,10 @@ class OnboardingScreen extends StatelessWidget {
               const SizedBox(height: 24),
               SizedBox(
                 height: 180,
-                child: Lottie.asset(
-                  'assets/animations/onboarding.json',
-                  repeat: true,
-                  errorBuilder:
-                      (BuildContext context, Object error, StackTrace? stack) {
-                    return Icon(
-                      Icons.account_balance_wallet,
-                      size: 120,
-                      color: theme.colorScheme.primary,
-                    );
-                  },
+                child: Icon(
+                  Icons.account_balance_wallet,
+                  size: 120,
+                  color: theme.colorScheme.primary,
                 ),
               ),
               const SizedBox(height: 24),
