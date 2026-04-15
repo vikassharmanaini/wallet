@@ -262,4 +262,23 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get signTxTitle => 'Confirm transaction';
+
+  @override
+  String get settingsTheme => 'Theme';
+
+  @override
+  String get settingsThemeLight => 'Light';
+
+  @override
+  String get settingsThemeDark => 'Dark';
+
+  @override
+  String get settingsThemeSystem => 'System';
+
+  @override
+  String get settingsNotifications => 'Notifications';
+
+  @override
+  String get settingsNotificationsStub =>
+      'Local notifications will appear here.';
 }

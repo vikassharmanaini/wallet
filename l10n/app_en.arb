@@ -94,5 +94,11 @@
   "browserTitle": "Browser",
   "settingsTitle": "Settings",
   "signPersonalTitle": "Sign message",
-  "signTxTitle": "Confirm transaction"
+  "signTxTitle": "Confirm transaction",
+  "settingsTheme": "Theme",
+  "settingsThemeLight": "Light",
+  "settingsThemeDark": "Dark",
+  "settingsThemeSystem": "System",
+  "settingsNotifications": "Notifications",
+  "settingsNotificationsStub": "Local notifications will appear here."
 }

@@ -7,6 +7,7 @@ import 'package:superweb3wallet/presentation/screens/buy/buy_screen.dart';
 import 'package:superweb3wallet/presentation/screens/home/wallet_home_screen.dart';
 import 'package:superweb3wallet/presentation/screens/receive/receive_screen.dart';
 import 'package:superweb3wallet/presentation/screens/send/send_screen.dart';
+import 'package:superweb3wallet/presentation/screens/settings/settings_screen.dart';
 import 'package:superweb3wallet/presentation/screens/swap/swap_screen.dart';
 import 'package:superweb3wallet/presentation/screens/legal/legal_webview_screen.dart';
 import 'package:superweb3wallet/presentation/screens/onboarding/backup_phrase_screen.dart';
@@ -132,6 +133,12 @@ class AppRouter {
           name: BrowserScreen.routeName,
           builder: (BuildContext context, GoRouterState state) =>
               const BrowserScreen(),
+        ),
+        GoRoute(
+          path: SettingsScreen.routePath,
+          name: SettingsScreen.routeName,
+          builder: (BuildContext context, GoRouterState state) =>
+              const SettingsScreen(),
         ),
         GoRoute(
           path: LegalWebViewScreen.routePath,

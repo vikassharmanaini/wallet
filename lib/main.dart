@@ -8,6 +8,7 @@ import 'package:local_auth/local_auth.dart';
 import 'app.dart';
 import 'core/router/app_router.dart';
 import 'core/security/local_auth_service.dart';
+import 'data/datasources/notification_service.dart';
 import 'data/datasources/network_asset_loader.dart';
 import 'data/datasources/preferences_storage.dart';
 import 'data/datasources/wallet_secure_storage.dart';
@@ -36,6 +37,8 @@ Future<void> main() async {
   appLock.attach();
   final LocalAuthService localAuth = LocalAuthService(LocalAuthentication());
   final GoRouter router = AppRouter.createRouter(appLock: appLock);
+  final NotificationService notifications = NotificationService();
+  await notifications.init();
   runApp(
     MultiRepositoryProvider(
       providers: <RepositoryProvider<dynamic>>[

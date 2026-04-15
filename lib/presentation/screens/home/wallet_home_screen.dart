@@ -11,6 +11,7 @@ import 'package:superweb3wallet/presentation/screens/browser/browser_screen.dart
 import 'package:superweb3wallet/presentation/screens/buy/buy_screen.dart';
 import 'package:superweb3wallet/presentation/screens/receive/receive_screen.dart';
 import 'package:superweb3wallet/presentation/screens/send/send_screen.dart';
+import 'package:superweb3wallet/presentation/screens/settings/settings_screen.dart';
 import 'package:superweb3wallet/presentation/screens/swap/swap_screen.dart';
 import 'package:superweb3wallet/presentation/widgets/identicon/wallet_identicon.dart';
 import 'package:superweb3wallet/presentation/widgets/network/network_selector_sheet.dart';
@@ -49,6 +50,14 @@ class _WalletHomeScreenState extends State<WalletHomeScreen>
     final FetchPortfolioBalanceUseCase portfolio =
         FetchPortfolioBalanceUseCase(networks);
     return Scaffold(
+      appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.settings),
+            onPressed: () => context.push(SettingsScreen.routePath),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: FutureBuilder<String?>(
           future: wallet.primaryAddress(),
